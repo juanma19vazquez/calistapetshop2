@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  background-color: #A0CDF8
+}
+header{
+  background-color:  rgb(166, 160, 74) ;
+  height: 28px;
+
+}
+/* icono whatsapp */
+.claseiconowa {
+  position: fixed;
+  height: 50px;
+  right: 2px;
+  bottom: 15vh;
+  z-index: 3;
+}
+/* menu */
+#botonmenu{
+  height: 25px;
+  border-radius: 10%;
+  padding: 1px;
+}
+
+
+#menu {
+  display: none;
+  grid-template-columns: 300px;
+  grid-auto-rows: 1fr;
+  background-color: rgb(166, 160, 74);
+  border: rgb(166, 160, 74)solid 3px;
+  position: absolute;
+  top: 30px;
+  height: 0;
+  animation-name: aparecer-menu;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  list-style-type: none;
+  position: absolute;
+  font-family: 'Courgette', cursive;
+ }
+
+
+.botones {
+  background-color: rgb(166, 160, 74);
+  border: solid white 1px;
+  padding: 6px;
+  color: white;
+  font-size: 1.05rem;
+  text-decoration: none;
+
+}
+
+.botones:hover{
+  background-color: wheat;
+  font-size: larger;
+}
+.loginexitoso{
+  background-color: wheat;
+  color: black;
+}
+
+/* main */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "header header"
+    "foto foto"
+    "animales1 animales2"
+    "perro gato"
+    "tit tit"
+    "novedades novedades"
+    "tit2 tit2"
+    "slider slider"
+    "mascomprados mascomprados"
+    "pastito pastito";
+  height: auto;
+  justify-items: center;
+}
+
+.div2 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-area: foto;
+}
+
+.logocalista {
+  max-height: 200px;
+  height: 20vh;
+}
+.div3 {
+  grid-area: animales1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.perro {
+  height: min(200px,30vw);
+  margin-left: 25px;
+}
+.gato {
+  height: min(200px,30vw);
+}
+
+.div4 {
+  grid-area: animales2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.div3-1 {
+  grid-area: perro;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-family: 'Caveat', cursive;
+  font-size: 8vmin;
+  color: rgb(166, 160, 74);
+}
+.imgprod{
+width:50px
+}
+#nuevoslider{
+  background-color: brown;
+  color: white;
+  height: 50px;
+  width: 200px;
+  grid-area: novedades;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.div4-1 {
+  grid-area: gato;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-family: 'Caveat', cursive;
+  font-size: 8vmin;
+  color: rgb(166, 160, 74);
+}
+
+.div5 {
+  grid-area: tit;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-family: 'Courgette', cursive;
+  font-size: 12vmin;
+  color: rgb(166, 160, 74);
+  height: 8vh;
+  margin-top: 2vh;
+  padding: 2vh;
+  margin-bottom: 2vh;
+}
+.div5-1 {
+  grid-area: novedades;
+  display: none;
+}
+
+
+.div6 {
+  grid-area: tit2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-family: 'Courgette', cursive;
+  font-size: 12vmin;
+  color: rgb(166, 160, 74);
+  height: 8vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 2vh;
+}
+.div6-1 {
+  grid-area: mascomprados;
+  display: none;
+}
+.div7 {
+  grid-area: pastito;
+  display: grid;
+}
+/* footer */
+.pastito {
+  width: 100%;
+  height: 12vh;
+}
+
+
+footer {
+  height: 52px;
+  background-color: rgb(166, 160, 74);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas:
+  "desarrollo logos";
+  align-items: center;
+
+}
+
+#desarrollador{
+    color: white;
+    font-size: 0.75rem;
+    grid-area: desarrollo;
+    display: none;
+}
+.logoJM{
+    grid-area: desarrollo;
+    margin-left: 15px;
+}
+
+footer>ul>li{
+    list-style:none;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius: 50%;
+    color: #A6A04A;
+    background-color: white;
+    margin-left: auto;
+    justify-items: right;
+    margin-right: 10px;
+    float:right;
+}
+.botones a{
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+p{
+  font-size: min(7vw,60px);
+  color: rgb(166, 160, 74);
+  font-family: 'Caveat', cursive;
+  display: block;
+}
+
+/* slider */
+.contenedor-slider {
+  width: 250px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  grid-area: mascomprados;
+}
+
+.slider {
+  display: flex;
+  width: 500px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__section {
+  width: 100%;
+}
+
+.slider__img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  padding-left: 40px;
+}
+
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__btn:hover {
+  background-color: green;
+}
+
+.slider__btn--left {
+  left: 10px;
+  color: white
+}
+
+.slider__btn--right {
+  right: 10px;
+  color: white
+}
+
+
+@media (min-width:420px){
+
+.claseiconowa {
+  height: 60px;
+}
+.grid{
+  justify-items:normal
+}
+#botonmenu{
+  height: 28px;
+  border-radius: 10%;
+  padding: 1px;
+}
+.logocalista {
+height: min(200px,30vw);
+}
+.perro {
+margin-left: 80px;
+height: min(300px,30vw);
+}
+.gato {
+height: min(300px,30vw);
+}
+
+.div3-1 {
+  font-size: max(4vw,50px)
+}
+.div4-1 {
+  font-size: max(4vw,50px)
+
+}
+#nuevoslider{
+  display: none;
+}
+.div5 {
+  font-size: max(4vw,40px);
+  margin-bottom: 10px;
+}
+.div6 {
+  font-size: max(4vw,40px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.imgprod{
+width:max(15vw,100px);
+}
+
+.div5-1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 2;
+  align-items: center;
+  justify-items: center;
+}
+.div6-1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 2;
+  align-items: center;
+  justify-items: center;
+}
+
+#desarrollador{
+    color: white;
+    font-size: 1rem;
+    grid-area: desarrollo;
+    margin-left: 60px;
+    display: inline;
+}
+.logoJM{
+    grid-area: desarrollo;
+    margin-left: 15px;
+}
+
+footer>ul>li{
+    list-style:none;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius: 50%;
+    color: #A6A04A;
+    background-color: white;
+    margin-left: auto;
+    justify-items: right;
+    margin-right: 10px;
+    float: right;
+}
+.div7 {
+  grid-area: pastito;
+  display: grid;
+}
+
+.pastito {
+  width: 100%;
+  height: 12vh;
+}
+
+.slider {
+  display: none;
+}
+}
+
+@keyframes aparecer-menu {
+  0% {
+    height: 0;
+  }
+  90% {
+    height: 200px;
+  }
+  95% {
+    height: 180px;
+  }
+  100% {
+    height: 210px;
+  }
+}

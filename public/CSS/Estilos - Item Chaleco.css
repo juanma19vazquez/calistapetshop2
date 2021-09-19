@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #A0CDF8
+}
+header{
+  background-color:  rgb(166, 160, 74) ;
+  height: 28px;
+}
+/* icono whatsapp */
+.claseiconowa {
+  position: fixed;
+  height: 50px;
+  right: 3px;
+  bottom: 15vh;
+  z-index: 3;
+}
+/* menu */
+#botonmenu{
+  height: 25px;
+  border-radius: 10%;
+  padding: 1px;
+}
+
+
+#menu {
+  display: none;
+  grid-template-columns: 300px;
+  grid-auto-rows: 1fr;
+  background-color: rgb(166, 160, 74);
+  border: rgb(166, 160, 74)solid 3px;
+  position: absolute;
+  top: 30px;
+  height: 0;
+  animation-name: aparecer-menu;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  list-style-type: none;
+  position: absolute;
+  font-family: 'Courgette', cursive;
+ }
+
+
+.botones {
+  background-color: rgb(166, 160, 74);
+  border: solid white 1px;
+  padding: 6px;
+  color: white;
+  font-size: 1.05rem;
+  text-decoration: none;
+
+}
+
+.botones:hover{
+  background-color: wheat;
+  font-size: larger;
+}
+
+.botonest {
+  background-color: rgb(166, 160, 74);
+  border: solid white 1px;
+  padding: 6px;
+  color: white;
+  font-size: 1.05rem;
+  text-decoration: none;
+
+}
+
+.botonest:hover{
+  background-color: wheat;
+  font-size: larger;
+}
+
+/* main */
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header header"
+  "Titulo Titulo Titulo"
+  "Foto Foto Foto"
+  "Eleccion1 Eleccion2 Eleccion3"
+  "info1 info1 info2"
+  "Boton Boton Boton";
+  height: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.Titulo{
+grid-area: Titulo;
+display: inline-block;
+font-size: 40px;
+color: rgb(166, 160, 74);
+margin-top: 40px;
+margin-bottom: 40px;
+font-family: 'Courgette', cursive;
+}
+
+.fotoprincipal{
+width: 200px;
+}
+.fotoschiquitas{
+height: 70px;
+opacity: 70%;
+}
+.fotoschiquitas:hover{
+opacity: 100%;
+}
+.foto{
+grid-area: Foto;
+width: 200px;
+box-shadow: 0 0 0 6px #fff, 0 15px 50px ;
+margin-bottom: 30px;
+display: grid;
+justify-items: center;
+align-items: center;
+background-color: wheat;
+}
+.foto1{
+grid-area: Eleccion1;
+border:solid wheat 5px;
+border-radius: 10px;
+margin:5px;
+display: grid;
+justify-items: center;
+align-content: center;
+box-shadow: 0 0 0 1px #fff, 0 5px 30px ;
+}
+.foto2{
+grid-area: Eleccion2;
+border:solid wheat 5px;
+border-radius: 10px;
+margin:5px;
+display: grid;
+justify-items: center;
+box-shadow: 0 0 0 1px #fff, 0 5px 15px ;
+}
+.foto3{
+grid-area: Eleccion3;
+border:solid wheat 5px;
+border-radius: 10px;
+margin:5px;
+display: grid;
+justify-items: center;
+box-shadow: 0 0 0 1px #fff, 0 5px 15px ;
+}
+.calculadora{
+grid-area: Calc;
+display: none;
+
+}
+
+.info1{
+grid-area: info1;
+margin-top: 30px;
+display:grid;
+grid-template-columns: 1fr;
+font-size: min(40px,6vh);
+font-family: 'Courgette', cursive;
+color: rgb(166, 160, 74);
+}
+#talle{
+  background-color: rgb(166, 160, 74);
+  height: 70px;
+  border: wheat solid 5px;
+  border-radius: 10%;
+  font-size: 18px;
+}
+.info2{
+grid-area: info2;
+margin-top: 30px;
+font-family: 'Encode Sans SC', sans-serif;
+font-size: min(60px,6vh);
+border: wheat solid 5px;
+background-color: wheat;
+}
+
+#boton-comprar{
+  grid-area: Boton;
+  border:  rgb(166, 160, 74) 5px solid;
+  border-radius: 10%;
+  color: white;
+  font-family: source sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  padding: 3px 15px;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function:ease-in;
+}
+#boton-comprar:hover{
+  background-color:  rgb(166, 160, 74);
+  cursor: pointer;
+  border: black 3px solid;
+}
+.boton{
+  margin-top: 30px;
+  grid-area: Boton;
+}
+.div7 {
+  grid-area: pastito;
+  display: grid;
+}
+/* footer */
+.pastito {
+  width: 100%;
+  height: 12vh;
+  margin-top: 15px;
+}
+
+
+footer {
+  height: 52px;
+  background-color: rgb(166, 160, 74);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas:
+  "desarrollo logos";
+  align-items: center;
+
+}
+
+#desarrollador{
+    display: none;
+}
+.logoJM{
+    grid-area: desarrollo;
+    margin-left: 15px;
+}
+
+footer>ul>li{
+    list-style:none;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius: 50%;
+    color: #A6A04A;
+    background-color: white;
+    margin-left: auto;
+    justify-items: right;
+    margin-right: 10px;
+    float:right;
+}
+.botones a{
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+p{
+  font-size: min(7vw,60px);
+  color: rgb(166, 160, 74);
+  font-family: 'Caveat', cursive;
+  display: block;
+}
+
+
+@media (min-width:420px){
+
+.claseiconowa {
+  height: 60px;
+}
+h1{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Courgette', cursive;
+}
+.grid{
+  display:grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr;
+  grid-template-areas: 
+  "header header header header"
+  "Titulo Titulo Titulo Titulo"
+  "Foto Eleccion1 Calc info1"
+  "Foto Eleccion2 Calc info2"
+  "Foto Eleccion3 Blank Boton"
+  "Pasto Pasto Pasto Pasto";
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.Titulo{
+  font-size: 70px;
+}
+.fotoprincipal{
+width: 400px;
+}
+.fotoschiquitas{
+height: 120px;
+}
+
+
+.foto{
+height: 450px;
+width: auto;
+margin-right: 50px;
+
+}
+.foto1{
+margin:20px;
+}
+.foto2{
+margin:20px;
+}
+.foto3{
+margin:20px;
+}
+.calculadora{
+display: block;
+
+}
+.fotoscalculadora{
+  height: 300px;
+  border-radius: 10px;
+  border: solid wheat 10px;
+}
+
+
+#botonmenu{
+  height: 28px;
+  border-radius: 10%;
+  padding: 1px;
+}
+
+#desarrollador{
+    color: white;
+    font-size: 1rem;
+    grid-area: desarrollo;
+    margin-left: 60px;
+    display: inline;
+}
+
+.boton{
+display: grid;
+align-items: center;
+justify-items: center;
+}
+#boton-comprar{
+  font-size: 2rem;
+}
+footer>ul>li{
+    list-style:none;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius: 50%;
+    color: #A6A04A;
+    background-color: white;
+    margin-left: auto;
+    justify-items: right;
+    margin-right: 10px;
+    float: right;
+}
+
+.pastito {
+  width: 100%;
+  height: 12vh;
+  margin-top: 75px;
+}
+
+.slider {
+  display: none;
+}
+}
+@keyframes aparecer-menu {
+  0% {
+    height: 0;
+  }
+  90% {
+    height: 200px;
+  }
+  95% {
+    height: 180px;
+  }
+  100% {
+    height: 210px;
+  }
+}

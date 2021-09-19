@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  background-color: #A0CDF8
+}
+header{
+  background-color:  rgb(166, 160, 74) ;
+  height: 28px;
+
+}
+/* icono whatsapp */
+.claseiconowa {
+  position: fixed;
+  height: 50px;
+  right: 2px;
+  bottom: 15vh;
+  z-index: 3;
+}
+/* menu */
+#botonmenu{
+  height: 25px;
+  border-radius: 10%;
+  padding: 1px;
+}
+
+
+#menu {
+  display: none;
+  grid-template-columns: 300px;
+  grid-auto-rows: 1fr;
+  background-color: rgb(166, 160, 74);
+  border: rgb(166, 160, 74)solid 3px;
+  position: absolute;
+  top: 30px;
+  height: 0;
+  animation-name: aparecer-menu;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  list-style-type: none;
+  position: absolute;
+  font-family: 'Courgette', cursive;
+ }
+
+
+.botones {
+  background-color: rgb(166, 160, 74);
+  border: solid white 1px;
+  padding: 6px;
+  color: white;
+  font-size: 1.05rem;
+  text-decoration: none;
+
+}
+
+.botones:hover{
+  background-color: wheat;
+  font-size: larger;
+}
+
+
+/* main */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "foto"
+    "form"
+    "blanco"
+    "pastito";
+  height: 100vh;
+  justify-items: center;
+}
+
+label{
+  font-family: 'Courgette', cursive, bold;
+  color: rgb(166, 160, 74);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.links{
+  cursor: pointer;
+  border:none;
+  background-color: none;
+  color: rgb(166, 160, 74);
+  font-size: 1.3rem;
+  font-family: 'Courgette', cursive, bold;
+}
+input{
+height: 30px;
+border-radius: 10%;
+border-color: rgb(166, 160, 74);
+  font-family: 'Courgette', cursive, bold;
+  color: rgb(166, 160, 74);
+  font-size: 1.5rem;
+}
+
+.enviar{
+  height: 40px;
+  border-radius: 15px;
+  background-color:rgb(166, 160, 74);
+  font-size: 25px;
+}
+
+.enviar:hover{
+  background-color: rgb(190, 180, 40);
+  font-size:28px;
+  cursor: pointer;
+}
+.div2 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-area: foto;
+}
+
+.form{
+  padding-top: 10px;
+  padding-bottom: 30px;
+  display: grid;
+}
+.gridform{
+  display: grid;
+  grid-template-columns: auto;
+}
+.logocalista {
+  max-height: 300px;
+  height: 30vh;
+}
+
+
+.div7 {
+  grid-area: pastito;
+  display: grid;
+}
+/* footer */
+.pastito {
+  width: 100%;
+  height: 12vh;
+}
+
+
+footer {
+  height: 52px;
+  background-color: rgb(166, 160, 74);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas:
+  "desarrollo logos";
+  align-items: center;
+}
+
+#desarrollador{
+    color: white;
+    font-size: 0.75rem;
+    grid-area: desarrollo;
+    display: none;
+}
+.logoJM{
+    grid-area: desarrollo;
+    margin-left: 15px;
+}
+
+footer>ul>li{
+    list-style:none;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius: 50%;
+    color: #A6A04A;
+    background-color: white;
+    margin-left: auto;
+    justify-items: right;
+    margin-right: 10px;
+    float:right;
+}
+.botones a{
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+p{
+  font-size: min(7vw,60px);
+  color: rgb(166, 160, 74);
+  font-family: 'Caveat', cursive;
+  display: block;
+}
+
+
+@media (min-width:420px){
+
+.claseiconowa {
+  height: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-areas:
+    "foto form blank"
+    "foto form blank"
+    "blanco blanco blanco"
+    "pastito pastito pastito";
+  height: auto;
+  justify-items: normal;
+  padding-top: 200px;
+}
+#botonmenu{
+  height: 28px;
+  border-radius: 10%;
+  padding: 1px;
+}
+.logocalista {
+height: max(300px,30vw);
+}
+
+#desarrollador{
+    color: white;
+    font-size: 1rem;
+    grid-area: desarrollo;
+    margin-left: 60px;
+    display: inline;
+}
+.logoJM{
+    grid-area: desarrollo;
+    margin-left: 15px;
+}
+
+footer>ul>li{
+    list-style:none;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius: 50%;
+    color: #A6A04A;
+    background-color: white;
+    margin-left: auto;
+    justify-items: right;
+    margin-right: 10px;
+    float: right;
+}
+.div7 {
+  grid-area: pastito;
+  display: grid;
+}
+.blank {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-area: blanco;
+  height: 30vh;
+}
+.pastito {
+  width: 100%;
+  height: 12vh;
+}
+
+.slider {
+  display: none;
+}
+}
+
+@keyframes aparecer-menu {
+  0% {
+    height: 0;
+  }
+  90% {
+    height: 200px;
+  }
+  95% {
+    height: 180px;
+  }
+  100% {
+    height: 210px;
+  }
+}

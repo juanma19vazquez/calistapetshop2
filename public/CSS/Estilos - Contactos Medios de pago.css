@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #A0CDF8;
+  height: 100vh;
+}
+header{
+  background-color:  rgb(166, 160, 74) ;
+  height: 28px;
+}
+/* icono whatsapp */
+.claseiconowa {
+  position: fixed;
+  height: 50px;
+  right: 3px;
+  bottom: 15vh;
+  z-index: 3;
+}
+/* menu */
+#botonmenu{
+  height: 25px;
+  border-radius: 10%;
+  padding: 1px;
+}
+
+
+#menu {
+  display: none;
+  grid-template-columns: 300px;
+  grid-auto-rows: 1fr;
+  background-color: rgb(166, 160, 74);
+  border: rgb(166, 160, 74)solid 3px;
+  position: absolute;
+  top: 30px;
+  height: 0;
+  animation-name: aparecer-menu;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  list-style-type: none;
+  position: absolute;
+  font-family: 'Courgette', cursive;
+ }
+
+
+.botones {
+  background-color: rgb(166, 160, 74);
+  border: solid white 1px;
+  padding: 6px;
+  color: white;
+  font-size: 1.05rem;
+}
+
+.botones:hover{
+  background-color: wheat;
+  font-size: larger;
+}
+
+/* main */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  padding: 10px;
+  justify-items: center;
+}
+
+
+h1{
+grid-column: span 2;
+display: inline-block;
+font-size: 20px;
+color: rgb(166, 160, 74);
+font-family: 'Courgette', cursive;
+margin-bottom: 50px;
+}
+
+.medios{
+font-size: 20px;
+font-family: 'Courgette', cursive;
+color:rgb(166, 160, 74);
+display: grid;
+justify-items: center;
+}
+.logos{
+  object-fit: cover;
+  display: grid;
+  align-items: center;
+  margin: 10px;
+  justify-items: center;
+}
+.logos1{
+  height: 50px;
+  border-radius: 20px;
+  opacity: 50%;
+}
+
+.logos1:hover{
+opacity: 100%;
+}
+.logos2{
+  height: 30px;
+  font-family: 'Courgette', cursive;
+}
+.contacto{
+  font-size: 20px;
+  font-family: 'Caveat', cursive;
+  color: rgb(166, 160, 74);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+#Domicilio{
+   align-content: center;
+
+}
+.div7 {
+  grid-area: pastito;
+  display: grid;
+  background-color: none;
+}
+/* footer */
+.pastito {
+  width: 100%;
+  height: 12vh;
+  margin-top: 15px;
+}
+
+footer {
+  height: 52px;
+  background-color: rgb(166, 160, 74);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas:
+  "desarrollo logos";
+  align-items: center;
+
+}
+
+#desarrollador{
+    color: white;
+    font-size: 0.75rem;
+    grid-area: desarrollo;
+    display: none;
+}
+.logoJM{
+    grid-area: desarrollo;
+    margin-left: 15px;
+}
+
+footer>ul>li{
+    list-style:none;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius: 50%;
+    color: #A6A04A;
+    background-color: white;
+    margin-left: auto;
+    justify-items: right;
+    margin-right: 10px;
+    float:right;
+}
+.botones a{
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+p{
+  font-size: min(7vw,60px);
+  color: rgb(166, 160, 74);
+  font-family: 'Caveat', cursive;
+  display: block;
+}
+
+.pcontacto{
+  display: none;
+}
+@media (min-width:420px){
+
+.claseiconowa {
+  height: 60px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  padding-left: 60px;
+  justify-items:flex-start
+}
+h1{
+  font-size: 40px;
+}
+.medios{
+margin-top: 30px;
+font-size: min(30px,6vh);
+}
+.contacto{
+  font-size: 30px;
+  display: inline-block;
+}
+.logos{
+  height: 100px;
+}
+.logos1{
+  height: 100px;
+}
+.logos2{
+  height: 80px;
+}
+.pcontacto{
+  display: inline;
+  font-size: 30px;
+}
+#botonmenu{
+  height: 28px;
+}
+
+#desarrollador{
+    font-size: 1rem;
+    margin-left: 60px;
+    display: inline;
+}
+
+.boton{
+grid-area: Boton;
+display: grid;
+align-items: center;
+justify-items: center;
+}
+#boton-comprar{
+  font-family: source sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  padding: 3px 15px;
+  background-color: transparent;
+}
+
+.pastito {
+  width: 100%;
+  height: 12vh;
+  margin-top: 75px;
+}
+}
+
+@keyframes aparecer-menu {
+  0% {
+    height: 0;
+  }
+  90% {
+    height: 200px;
+  }
+  95% {
+    height: 180px;
+  }
+  100% {
+    height: 210px;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Calista Pet Shop</title>
+    <link rel="stylesheet" href="./CSS/Estilos - signup.css">
+    <link rel="shortcut icon" href="./FOTOS/LOGO CALISTA.png"
+      />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Caveat&family=Courgette&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/7eeff42b55.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+<header>
+      <button id="botonmenu"><img
+        src="./FOTOS/Menu.png" class="menuhamburguesa"class="menuhamburguesa" height="100%"/>
+      </button>
+</header>
+    <nav id="menu">
+    <ul class="menu">
+      <li class="botones"><a href="/">Inicio</a></li>
+      <li class="botones"><a href="/nodesarrollada">Prendas</a></li>
+      <li class="botones"><a href="/nodesarrollada">Accesorios Comidas</a></li>
+      <li class="botones"><a href="/nodesarrollada">Juguetes</a></li>
+      <li class="botones"><a href="/contacto">Contacto / Medios de Pago</a></li>
+      <li class="botones"><a href="/login">Registrarse - Login </a></li>
+    </ul>
+</nav>
+
+    <a
+      href="https://api.whatsapp.com/send/?phone=59891920170&text=Hola!,quisiera+consultar+por+el+siguiente+producto:"
+      target="_blank"
+    >
+      <img
+        src="./FOTOS/Icono whatsapp.png"
+        class="claseiconowa"
+        alt="icono whatsapp"
+      />
+    </a>
+<main class="grid">
+    <div class="div2">
+      <img
+        src="./FOTOS/LOGO CALISTA.png"
+        class="logocalista"
+        alt="logocalista"
+      />
+    </div>
+
+    <div class="form">
+      <form action="http://localhost:2008/signup" method="POST" class="gridform">
+        <label for="Nombre">Nombre y Apellido(*)</label>
+        <input type="text" name="name" id="name" required><br>
+        <label for="Telefono">Teléfono(*)</label>
+        <input type="tel" name="telefono" id="telefono" required><br>
+        <label for="Direccion">Dirección(*)</label>
+        <input type="text" name="direccion" id="direccion" required><br>
+        <label for="Correo">Correo(*)</label>
+        <input type="email" name="correo" id="correo" required><br>
+        <label for="Password">Contraseña(*)</label>
+        <input type="password" name="password" id="password" required maxlength="12" minlength="6"><br>
+        <button class="enviar">Registrarse</button>
+         </form>
+         <br>
+         <br>
+         <br>
+    </div>
+
+    <div class="div7">
+      <img
+        src="./FOTOS/pasto footer.png"
+        class="pastito"
+        alt="pasto"
+      />
+    </div>
+</main>
+
+<footer>
+            <p id="desarrollador">Copyright© Desarrollo por Juanma Vazquez</p>
+            <img
+        src="./FOTOS/LOGOJM.png" class="logoJM"
+        alt="logo JM"
+        height=25px
+      />
+
+      <ul>
+        <li><a href="https://www.instagram.com/calista.petshop/"><i class="fab fa-2x fa-instagram-square"></i></a></li>
+        <li><a href="https://www.facebook.com/Calista-PetShop-104008015147289"><i class="fab fa-2x fa-facebook-square" ></i></a></li>
+        </ul>
+  <script src="./JS/inicio.js"></script>
+ </footer>
+</body>
+</html>
